@@ -1,0 +1,26 @@
+.heroPlaceHolder{
+    background-image: url(images/heading-pages-01.jpg);
+}
+
+.bg-title-page {
+    width: 100%;
+    min-height: 239px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+}
+
+.l-text2 {
+	font-family: Montserrat-Bold;
+	font-size: 50px;
+	color: white;
+	line-height: 1.2;
+	text-transform: uppercase;
+    margin: 0px;
+}
+
+.t-center{
+    text-align: center;
+}
