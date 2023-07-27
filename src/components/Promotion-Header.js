@@ -9,7 +9,7 @@ function App() {
   return (
     <header className='header1'>
       <div className='container-menu-header'>
-        <div className='topbar'>
+        <div className='topbar'> 
           <div className='topbar-social'>
             <a href='#' className='topbar-social-item'><i className="bi bi-facebook"></i></a>
             <a href='#' className='topbar-social-item'><i className="bi bi-instagram"></i></a>

@@ -168,7 +168,8 @@ option{
   transform: translateY(-50%);
 }
 
-.header-wrapicon1{
+.header-wrapicon1,
+.header-wrapicon2{
   height: 27px;
   position: relative;
 }
