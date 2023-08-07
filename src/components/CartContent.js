@@ -1,10 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Button, Col, Container, Row, Table, Form } from 'react-bootstrap';
 import './CartContent.css'
 import productImage from './images/item-10.jpg';
-
+import './js/functionality.js';
 
 const CartContent = () => {
+  const [inputValue, setInputValue] = useState(1)
+  const increaseAmount = () => {
+    setInputValue(inputValue + 1)
+  }
+
+  const decreaseAmount = () => {
+    setInputValue(inputValue - 1)
+  }
+  const handleChangeInput = (e) => {
+    setInputValue(e.target.value)
+  }
   return (
     <section className='cart bgwhite p-t-70 p-b-100'>
       <div className='container'>
@@ -31,13 +42,13 @@ const CartContent = () => {
                   <td className="column-3">$36.00</td>
                   <td className="column-4">
                     <div className="flex-w bo5 of-hidden w-size17">
-                      <Button className="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
+                      <Button className="btn-num-product-down color1 flex-c-m size7 bg8 eff2" onClick={()=>decreaseAmount()}>
                         <i className="bi-12 bi bi-dash" aria-hidden="true"></i>
                       </Button>
 
-                      <input className="size8 m-text18 t-center num-product" type="number" name="num-product1" />
+                      <input className="size8 m-text18 t-center num-product" type="number" name="num-product1" value={inputValue} onChange={handleChangeInput}/>
 
-                      <Button className="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
+                      <Button className="btn-num-product-up color1 flex-c-m size7 bg8 eff2" onClick={()=>increaseAmount()}>
                         <i className="bi-12 bi bi-plus" aria-hidden="true"></i>
                       </Button>
                     </div>
@@ -55,13 +66,13 @@ const CartContent = () => {
                   <td className="column-3">$36.00</td>
                   <td className="column-4">
                     <div className="flex-w bo5 of-hidden w-size17">
-                      <button className="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
+                      <button className="btn-num-product-down color1 flex-c-m size7 bg8 eff2" onClick={()=>decreaseAmount()}>
                         <i className="bi-12 bi bi-dash" aria-hidden="true"></i>
                       </button>
 
-                      <input className="size8 m-text18 t-center num-product" type="number" name="num-product1" />
+                      <input className="size8 m-text18 t-center num-product" type="number" name="num-product2" value={inputValue} onChange={handleChangeInput}/>
 
-                      <button className="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
+                      <button className="btn-num-product-up color1 flex-c-m size7 bg8 eff2" onClick={()=>increaseAmount()}>
                         <i className="bi-12 bi bi-plus" aria-hidden="true"></i>
                       </button>
                     </div>
@@ -79,13 +90,13 @@ const CartContent = () => {
                   <td className="column-3">$36.00</td>
                   <td className="column-4">
                     <div className="flex-w bo5 of-hidden w-size17">
-                      <button className="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
+                      <button className="btn-num-product-down color1 flex-c-m size7 bg8 eff2" onClick={()=>decreaseAmount()}>
                         <i className="bi-12 bi bi-dash" aria-hidden="true"></i>
                       </button>
 
-                      <input className="size8 m-text18 t-center num-product" type="number" name="num-product1" />
+                      <input className="size8 m-text18 t-center num-product" type="number" name="num-product3" value={inputValue} onChange={handleChangeInput}/>
 
-                      <button className="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
+                      <button className="btn-num-product-up color1 flex-c-m size7 bg8 eff2" onClick={()=>increaseAmount()}>
                         <i className="bi-12 bi bi-plus" aria-hidden="true"></i>
                       </button>
                     </div>
